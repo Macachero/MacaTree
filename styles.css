@@ -3,187 +3,126 @@
 
 :root {
     --fonte-primaria: "Montserrat", sans-serif;
-    --cor-primaria: #49504b;
-    --cor-secundaria: #ccbd94;
+    --cor-primaria: #081434;
+    --cor-botao: #94d0ad;
+    --cor-titulos: #db8c98;
 }
-
+ 
 body {
-    font-family: var(--fonte-primaria);
-    font-size: 1rem; /* Usando rem para font-size, baseado no tamanho da fonte base */
-    height: 100vh;
-    background: linear-gradient(
-      135deg,
-      #49504b 25%,
-      #616b64 25%,
-      #616b64 50%,
-      #49504b 50%,
-      #49504b 75%,
-      #616b64 75%,
-      #616b64
-    );
-    background-size: 7vw 7vw; /* Usando unidades relativas para o background */
-    animation: move 6s linear infinite;
-}
+  background-color: var(--cor-primaria);
+  font-family: var(--fonte-primaria);
+  color:var(--cor-titulos);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+} 
 
-@keyframes move {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 7vw 7vw;
-    }
-}
-
-.cabecalho {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem;
-    color: var(--cor-secundaria);
-    text-align: center;
-    gap: 1rem;
-    margin-bottom: 0.2rem;
-}
-
-.logoBC {
-    animation: slide-in 1.5s ease-out;
+.div-cabecalho { 
+  margin: 2rem 0 2em 0;
 }
 
 .titulo_principal {
-    font-weight: 700;
-    font-size: 1.25rem; /* Usando rem para font-size */
-    animation: slide-in 1.5s ease-out;
-}
-
-@keyframes slide-in {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-}
-
-.paragrafo_principal {
-    font-size: 1rem; /* Usando rem para font-size */
-    margin: 0 3rem;
-    line-height: 1.5;
-    animation: slide-in 1.5s ease-out;
-    margin-bottom: 80px;
-}
-
-.links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-}
-
-.natal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 1em 0 0.5em 0;  
 }
 
 .catalogos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.titulos_secoes {
-    color: var(--cor-secundaria);
-    font-weight: 700;
-    font-size: 1rem;
-}
-
-.botao-natal {
-    background-image: url(Assets/Catálogo\ de\ Natal\ 2024.png);
-    background-size: 125%;
-    background-position: 40% 20%;
-    border-radius: 25px;
-    width: 40vw; /* Usando vw para largura, tornando-a relativa ao tamanho da tela */
-    height: 22vw; /* Usando vw para altura */
-    border: 2px solid transparent;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: balanco 1s linear infinite;
-}
-
-@keyframes balanco {
-    0% {
-      transform: rotate(-0.5deg);
-    }
-    50% {
-      transform: rotate(0.5deg);
-    }
-    100% {
-      transform: rotate(-0.5deg);
-    }
-}
-
-.botao-natal:hover {
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap : 1em;  
+  margin: 1em;
 }
 
 .botao-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 370px;
-  height: 4rem;
-  text-decoration: none;
-  color: black;
-  border: 1px solid #ccbd94;
-  border-radius: 50px;
-  background-color: var(--cor-secundaria);
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  box-sizing: border-box; 
-  word-wrap: break-word;
-  line-height: 1.8;
   text-align: center;
-  
+  background-color: var(--cor-botao);
+  border: 1px solid var(--cor-botao);
+  border-radius: 3em;
+  padding: 1.2em;
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.icone {
-  margin-right: 10px; /* Dá espaço entre o ícone e o texto */
-  width: 20px; /* Define uma largura fixa para o ícone */
-  height: 20px; /* Define uma altura fixa para o ícone */
+.botao-link img {
+  height: 35px;
+  flex-shrink: 0;
+}
+
+.botao-link span {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.instagram {
+  padding: 3em;
+}
+
+.elfsight-app-5d260a3f-4126-47db-90d6-5e6998952753{
+  border: solid 12px var(--cor-botao);
+  border-radius: 3em;
 }
 
 .paragrafo-footer {
-    text-align: center;
-    color: white;
-    font-size: 0.5rem; /* Usando rem para font-size */
-    margin-top: 4rem;
-    padding: 1rem;
+  margin: 1em;
+  font-size: 12px;
 }
 
-.instagram { 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin: 2rem auto;
+@media (max-width: 1200px) {
+  /* Ajustes para telas grandes (ex: laptops) */
+  .catalogos {
+    margin: 2em;
+  }
+
+  .botao-link {
+    padding: 1em;
+    font-size: 0.9rem;
+  }
+
+  .titulo_principal {
+    font-size: 1.1rem;
+  }
 }
 
-/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  /* Ajustes para tablets e dispositivos médios */
+  .titulo_principal {
+    font-size: 1rem;
+  }
 
+  .botao-link {
+    padding: 1em;
+    font-size: 1rem;
+    width: 80%;
+  }
 
-@media screen and (min-width: 1200px) {
-    
-    .botao-link {
-        max-width: 500px;
-        width: 100%;
-    }
+  .catalogos {
+    margin: 2em;
+  }
+
+  .instagram {
+    padding: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+ 
+.paragrafo_principal {
+  margin: 0 3em 0 3em;
+  font-size: 15px;
+}
+
+}
+
+.botao-link {
+  width: 90%;
+  font-size: 15px;
+  text-align: center;
 }
