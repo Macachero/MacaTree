@@ -1,23 +1,36 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+  font-family: 'MinhaFonte';
+  src: url('Fonts/esthetique.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
     --fonte-primaria: "Montserrat", sans-serif;
-    --cor-primaria: #081434;
+    --cor-primaria: rgb(8, 19, 51);
     --cor-botao: #94d0ad;
     --cor-titulos: #db8c98;
 }
  
+html, body { height: 100%; }
+
 body {
   background-color: var(--cor-primaria);
   font-family: var(--fonte-primaria);
-  color:var(--cor-titulos);
+  color:var(--fonte-primaria);
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 } 
+
+main {
+  flex-grow: 1
+}
 
 .cabecalho {
   display: flex;
@@ -27,6 +40,20 @@ body {
 
 .div-cabecalho { 
   margin: 2rem 0 2em 0;
+  color: var(--cor-primaria);
+
+}
+
+
+.logo-cabecalho {
+  width: 200px;
+  height: 105px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.5em;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .titulo_principal {
@@ -36,22 +63,21 @@ body {
 }
 
 .video-container {
-  width: 80%;
-  height: 400px;
-  border-radius: 30px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: none;
+  position: fixed;  /* O vídeo fica fixo na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo */
+    overflow: hidden;
 }
 
 video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 100%;
+  transition: opacity 1s ease;
 }
 
 .catalogos {
@@ -60,6 +86,15 @@ video {
   justify-content: center;
   gap : 1em;  
   margin: 1em;
+}
+
+.titulos_secoes {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cor-titulos);
+  background-color: (var(--cor-primaria),0.3);
+  border-radius: 15px;
+  padding: 0.5em;
 }
 
 .botao-link {
@@ -93,13 +128,14 @@ video {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Adiciona uma sombra ao clicar */
 }
 
-.instagram {
-  padding: 3em;
+
+footer { 
+  text-align: center;
 }
 
-.elfsight-app-5d260a3f-4126-47db-90d6-5e6998952753{
-  border: solid 12px var(--cor-botao);
-  border-radius: 3em;
+.logo-footer {
+  width: 70px;
+  height: 70px;
 }
 
 .paragrafo-footer {
@@ -159,7 +195,52 @@ video {
   text-align: center;
 }
 
-.video-container{
-  max-height: 200px;
+
+/* ---------------animacoes------------------ */
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 2;
+  }
+}
+.video-container {
+  animation: fadeIn 3s ease-in-out;
 }
 
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%); /* Começa fora da tela, no topo */
+    opacity: 0; /* Invisível no início */
+  }
+  to {
+    transform: translateY(0); /* Chega na posição original */
+    opacity: 1; /* Fica visível */
+  }
+}
+
+.div-cabecalho {
+  animation: slideFromTop 2s ease-out; /* Duração de 1s */
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100%); /* Começa fora da tela, embaixo */
+    opacity: 0; /* Invisível no início */
+  }
+  to {
+    transform: translateY(0); /* Chega na posição original */
+    opacity: 1; /* Fica visível */
+  }
+}
+
+.links {
+  animation: slideFromBottom 2s ease-out; /* Duração de 1s */
+}
+
+footer {
+  animation: slideFromBottom 2s ease-out;
+}
