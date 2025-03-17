@@ -31,7 +31,7 @@
 .menu {
     background-color: var(--cor-primaria);
     position: fixed;
-    z-index: 500;
+    z-index: 1000;
 }
 
 .menu a {
@@ -95,6 +95,7 @@
     background-color: var(--cor-primaria);
 }
 
+
 #aconchego {
     margin-bottom: 30px;
 }
@@ -153,7 +154,6 @@
 }
 
 #preco-aconchego {
-    font-family: var(--fonte-titulo);
     font-size: 12px;
     position: relative;
     top: 0.5em;
@@ -218,12 +218,11 @@
 }
 
 #preco-boxforyou { 
-    font-family: var(--fonte-titulo);
     font-size: 13px;
 }
 
 #preco-boxforyou span {
-    font-size: 11px;
+    font-size: 10px;
 }
 
 #boxforyou3 {
@@ -278,16 +277,13 @@
 }
 
 #preco-petit-cha {
-    font-family: var(--fonte-titulo);
     font-size: 12px;
-    position: relative;
     margin: 0.5em;
-    left: 15em;
+    margin-left: 40px;
 }
 
 #preco-petit-cha span {
     font-size: 10px;
-    margin-left: 1em;
 }
 
 #fotos-petit-cha {
@@ -349,14 +345,13 @@
 }
 
 #preco-cesto-afeto{
-    font-size: 10px;
+    font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
 
 }
 
 #preco-cesto-afeto span {
-    font-size: 8px;
+    font-size: 10px;
 }
 
 #fotos-cesto-afeto {
@@ -406,8 +401,7 @@
 }
 
 #div-preco-feliz-dia {
-    font-size: 10px;
-    font-family: var(--fonte-titulo);
+    font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -419,8 +413,7 @@
 }
 
 #preco-dia-feliz span {
-    font-family: var(--fonte-titulo);
-    font-size: 8px;
+    font-size: 10px;
 }
 
 #imagens-dia-feliz {
@@ -483,14 +476,13 @@
 }
 
 #preco-cesta-premium {
-    font-size: 10px;
+    font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
     margin-left: 200px;
 }
 
 #preco-cesta-premium span {
-    font-size: 8px;
+    font-size: 10px;
 }
 
 #cafe-luxury {
@@ -524,8 +516,7 @@
 #preco-cafe-luxury {
     font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
-    margin-left: 160px;
+    margin-left: 20px;
 }
 
 #preco-cafe-luxury span {
@@ -587,8 +578,7 @@ li {
 #preco-brunch-bc {
     font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
-    margin-left: 160px;
+    margin-left: 20px;
     position: relative;
     top: -8px;
 }
@@ -640,12 +630,11 @@ li {
 #preco-combo-perfeito {
     margin-top: 20px;
     font-size: 12px;
-    font-family: var(--fonte-titulo);
     text-align: start;
 }
 
 #preco-combo-perfeito span {
-    font-size: 9px;
+    font-size: 10px;
 }
 
 #fotos-conteudo-combo-perfeito {
@@ -713,16 +702,17 @@ li {
     margin-bottom: 20px;
 }
 
-#itens-box-espumante {
-    font-size: 13px;
-    margin-left: 50px;
+#descricao-box-espumante {
+    font-size: 12px;
+    text-align: center;
+    padding: 0 2em 0.5em 2em;
 }
 
 #preco-box-espumante {
     font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
-    margin-left: 200px;
+    text-align: start;
+
 }
 
 #preco-box-espumante span {
@@ -787,8 +777,8 @@ li {
 #preco-cesta-encantar {
     font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
     margin-top: 10px;
+    text-align: start;
 }
 
 #doce-pausa {
@@ -849,7 +839,6 @@ li {
     font-size: 12px;
     padding: 1em;
     margin-right: 10px;
-    font-family: var(--fonte-titulo);
 }
 
 #preco-doce-pausa span {
@@ -901,13 +890,13 @@ li {
 
 #lista-saborearoma {
     font-size: 12px;
+    margin-bottom: 35px;
 }
 
 #preco-saborearoma{
-    margin-top: 20px;
+
     margin-right: 15px;
     font-size: 12px;
-    font-family: var(--fonte-titulo);
 }
 
 #preco-saborearoma span {
@@ -945,8 +934,8 @@ li {
 
 
 .img-container {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
     border-radius: 50%;
@@ -956,7 +945,7 @@ li {
     justify-content: center;
     position: relative;
     left: 250px;
-    top: -100px;
+    top: -65px;
     margin-bottom: -100px;
 }
 
@@ -971,12 +960,11 @@ li {
 .expanded {
     width: 300px !important;
     height: 300px !important;
-    border-radius: 15px;
+    border-radius: 20px;
     position: relative;
     top: 90%;
     left: 50%;
     transform: translate(-50%, -90%);
-    padding: 10px;
 }
 
 .expanded img {
@@ -985,18 +973,19 @@ li {
 }
 
 #gif-click {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     position: relative;
-    top: -30px;
-    left: 280px;
+    top: 20px;
+    left: 300px;
+    rotate: -20deg;
 }
 
 #preco-mimo-surprise {
     font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 #preco-mimo-surprise span{
@@ -1050,7 +1039,9 @@ li {
 #preco-pequenas-alegrias {
     font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
+    font-family: var(--fonte-primaria);
+    text-align: start;
+    margin-left: 10px;
 }
 
 #preco-pequenas-alegrias span {
@@ -1118,7 +1109,7 @@ li {
 #preco-box-petisquinho {
     font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
+    font-family: var(--fonte-primaria);
 }
 
 #preco-box-petisquinho span {
@@ -1158,7 +1149,6 @@ li {
 #preco-caixa-cervejeiro {
     font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
 }
 
 #preco-caixa-cervejeiro span {
@@ -1217,8 +1207,8 @@ li {
 #preco-box-momentos {
     font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
-    margin-left: 230px;
+    text-align: start;
+    
 }
 
 #preco-box-momentos span {
@@ -1227,14 +1217,17 @@ li {
 
 #fotos-box-momentos {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 #foto-box-momentos1 {
-    width: 50%;
-    height: 200px;
+    width: 180px;
+    height: 210px;
     object-fit: cover;
+    border-radius: 15px
 }
 
 #foto-box-momentos2 {
@@ -1281,8 +1274,7 @@ li {
 #preco-caixote-celebrar {
     font-size: 12px;
     padding: 1em;
-    font-family: var(--fonte-titulo);
-    margin-left: 150px;
+    margin-left: 20px;
 }
 
 #preco-caixote-celebrar span {
